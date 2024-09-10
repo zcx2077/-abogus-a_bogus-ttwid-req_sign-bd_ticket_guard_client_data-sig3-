@@ -1,12 +1,3 @@
-function _private_key() {
-    var i = KEYUTIL.generateKeypair("EC", "secp256r1")
-                  , s = i.prvKeyObj
-                  , a = i.pubKeyObj;
-    // console.log(s)
-    _public_key1 = KEYUTIL.getPEM(a)
-     private_key1 = KEYUTIL.getPEM(s, "PKCS8PRV");
-    return [_public_key1,private_key1]
-}
 //bd_ticket_guard_client_data生成方法
 //在登录过程中会出现两个bd_ticket_guard_client_data，可以抓包base64解码查看两个bd_ticket_guard_client_data组成，
 //第一个'{"bd-ticket-guard-version":2,"bd-ticket-guard-iteration-version":1,"bd-ticket-guard-ree-public-key":"BN5YmS3JDO+9bge5r1NgWzg6k6TeHcNIagDxeD77Q9rabrX+kibN38mziGVe6Jj88U2d4Zuz46Z61GjFM4NCCAc=","bd-ticket-guard-web-version":1}'
